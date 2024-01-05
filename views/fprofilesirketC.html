@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şirket C Profili</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/profile.css">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 mb-5">
+                    <h1>ŞİRKET C PROFİLİ</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR CODING-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light background">
+            <form action="./anasayfaFirma.html">
+                <a class="navbar-brand pl-5 text-muted" href="/views/anasayfaFirma.html">ŞikayetÇukuru</a>
+            </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <form action="/views/anasayfaFirma.html" method="get">
+                            <a class="nav-link" href="/views/anasayfaFirma.html">Anasayfa</a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Bilgilerim Kutusu -->
+        <section class="mt-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="bg-light p-4">
+                        <h2 class="text-muted">BİLGİLERİM</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum dolorum ex. Adipisci
+                            consectetur recusandae, eius perferendis ratione ducimus dignissimos facere, quae ullam
+                            natus sit enim beatae dolores at corporis veniam vel molestiae voluptate alias animi
+                            praesentium laudantium accusantium cumque dicta! Obcaecati iste sed quod et vitae vero hic
+                            similique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profil Bilgileri -->
+        <section class="mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="text-muted">Firma Bilgileri</h2>
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <tbody>
+                    <tr>
+                        <th>Şirket Adı :</th>
+                        <td>Şirket C</td>
+                    </tr>
+                    <tr>
+                        <th>Sektör :</th>
+                        <td>Yeni Sektör</td>
+                    </tr>
+                    <tr>
+                        <th>Telefon :</th>
+                        <td>987 654 321</td>
+                    </tr>
+                    <tr>
+                        <th>Adres :</th>
+                        <td><textarea style="resize: none;" disabled name="address" id="address" cols="50"
+                                rows="3">Yeni Adres, Yeni Şehir</textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Çalışan Sayısı :</th>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <th>Mail :</th>
+                        <td>sirketC@mail.com</td>
+                    </tr>
+                    <tr>
+                        <th>Kuruluş Tarihi :</th>
+                        <td>01/01/2010</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Şikayet Gönderme Formu -->
+        <div id="form-main">
+            <div id="form-div">
+                <form class="form" id="form1">
+                    <p class="name">
+                        <input name="companyName" type="text" class="feedback-input" placeholder="Firma Adı"
+                            id="companyName" />
+                    </p>
+                    <p class="konu">
+                        <input name="konu" type="text" class="feedback-input" id="konu" placeholder="Konu" />
+                    </p>
+                    <p class="text">
+                        <textarea name="text" class="feedback-input" id="comment" placeholder="Şikayetiniz"></textarea>
+                    </p>
+                    <div class="submit">
+                        <input type="submit" value="GÖNDER" id="button-blue" onclick="submitComplaintForm()" />
+                        <div class="ease"></div>
+                    </div>
+                    <div class="quit">
+                        <input type="text" onclick="closeForm()" value="KAPAT" id="button-red">
+                        <div class="ease"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+<!-- Şikayet Listesi -->
+<section class="pb-5 mb-4" id="sikayetlerim">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 id="pageNumber" class="text-muted">Şikayetler (18 şikayet)</h2>
+
+    </div>
+
+    <!-- Şikayet 1-10 -->
+    <div class="complaint-page" id="page1">
+        <!-- Şikayet 1 -->
+        <p class="mb-0" id="comment1">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName1">Ahmet Kaya</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu1">Ürün Kalitesizliği</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate1">15/01/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Ürünlerin kalitesizliği nedeniyle memnuniyetsizlik yaşıyorum.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 2 -->
+        <p class="mb-0" id="comment2">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName2">Ayşe Toprak</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu2">Hizmet Kalitesi</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate2">20/02/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Hizmet kalitesinin düşük olması nedeniyle memnuniyetsizlik yaşıyorum.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 3 -->
+        <p class="mb-0" id="comment3">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName3">Mehmet Yıldırım</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu3">Teslimat Gecikmesi</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate3">22/03/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Teslimatların gecikmesi nedeniyle memnuniyetsizlik yaşıyorum.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 4 -->
+        <p class="mb-0" id="comment4">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName4">Elif Arıkan</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu4">Fiyat/Performans</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate4">15/05/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Ürünlerin fiyatına göre performansının düşük olması nedeniyle
+                memnuniyetsizlik yaşıyorum.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 5 -->
+        <p class="mb-0" id="comment5">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName5">Zeynep Aydın</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu5">Ürün Kalitesi</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate5">20/06/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Ürünlerin kalitesinin düşük olması nedeniyle memnuniyetsizlik yaşıyorum.
+            </p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 6 -->
+        <p class="mb-0" id="comment6">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName6">Burak Demir</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu6">Ürün Garantisi</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate6">18/06/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Ürün garantisinin yetersiz olması nedeniyle memnuniyetsizlik yaşıyorum.
+            </p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 7 -->
+        <p class="mb-0" id="comment7">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName7">Aylin Can</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu7">Teslimat Sorunu</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate7">25/07/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Teslimatların eksik veya hatalı olması nedeniyle memnuniyetsizlik
+                yaşıyorum.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 8 -->
+        <p class="mb-0" id="comment8">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName8">Cemal Kaya</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu8">Ürün İade Süreci</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate8">03/08/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Ürün iade sürecinin uzun sürmesi nedeniyle memnuniyetsizlik yaşıyorum.
+            </p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 9 -->
+        <p class="mb-0" id="comment9">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName9">Merve Yılmaz</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu9">Personel İlgisi</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate9">11/09/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Personel ilgisinin yetersiz olması nedeniyle memnuniyetsizlik yaşıyorum.
+            </p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 10 -->
+        <p class="mb-0" id="comment10">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName10">Deniz Yıldız</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu10">Personel Tutumu</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate10">05/11/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Personelin tutumunun olumsuz olması nedeniyle memnuniyetsizlik yaşıyorum.
+            </p>
+        </div>
+        <hr>
+        </p>
+    </div>
+    <!-- Şikayet 11-20 -->
+    <div class="complaint-page" id="page2" style="display: none;">
+        <!-- Şikayet 11 -->
+        <p class="mb-0" id="comment11">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName11">Ali Tekin</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu11">Ürün Hatalı</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate11">12/12/2023</h5>
+            </div>
+            <p class="text-muted ml-5">Ürünüm hatalı geldi, acil çözüm bekliyorum.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 12 -->
+        <p class="mb-0" id="comment12">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName12">Esra Demirci</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu12">Hizmet Hızı</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate12">18/01/2024</h5>
+            </div>
+            <p class="text-muted ml-5">Hizmetinizin çok yavaş olması beni rahatsız ediyor.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 13 -->
+        <p class="mb-0" id="comment13">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName13">Fatma Yılmaz</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu13">Ürün Değişimi</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate13">22/02/2024</h5>
+            </div>
+            <p class="text-muted ml-5">Ürünümü değiştirmek istiyorum, yardımcı olur musunuz?</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 14 -->
+        <p class="mb-0" id="comment14">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName14">Gökhan Kaya</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu14">Personel Davranışı</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate14">10/03/2024</h5>
+            </div>
+            <p class="text-muted ml-5">Personelin tavrı hoş değil, bu konuda bir şeyler yapılmalı.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 15 -->
+        <p class="mb-0" id="comment15">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName15">Zehra Ay</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu15">Ürün İade</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate15">05/04/2024</h5>
+            </div>
+            <p class="text-muted ml-5">Ürünü iade etmek istiyorum, nasıl bir yol izlemeliyim?</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 16 -->
+        <p class="mb-0" id="comment16">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName16">Canan Yılmaz</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu16">Ürün Tasarımı</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate16">20/05/2024</h5>
+            </div>
+            <p class="text-muted ml-5">Ürün tasarımınızı beğenmiyorum, daha şık olabilir.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 17 -->
+        <p class="mb-0" id="comment17">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName17">Levent Demir</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu17">Ürün Kutusundaki Aksesuar</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate17">12/06/2024</h5>
+            </div>
+            <p class="text-muted ml-5">Ürün kutusundaki aksesuar eksik, lütfen kontrol edin.</p>
+        </div>
+        <hr>
+        </p>
+
+        <!-- Şikayet 18 -->
+        <p class="mb-0" id="comment18">
+        <div class="row ml-5">
+            <div class="d-flex pr-5">
+                <h5>Şikayet Sahibi :</h5>
+                <h5 id="customerName18">Nazlı Ay</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Konu :</h5>
+                <h5 id="konu18">Ürün Ambalajı</h5>
+            </div>
+            <div class="d-flex pl-5">
+                <h5>Şikayet Tarihi :</h5>
+                <h5 id="complaintDate18">25/07/2024</h5>
+            </div>
+            <p class="text-muted ml-5">Ürün ambalajı çok kötü, ürün zarar görmüş olabilir.</p>
+        </div>
+        <hr>
+        </p>
+    </div>
+
+    <!-- Sayfa Geçiş Tuşları -->
+    <div class="page-navigation">
+        <button onclick="changePage(-1)" disabled>Önceki Sayfa</button>
+        <button onclick="changePage(1)">Sonraki Sayfa</button>
+    </div>
+</section>
+
+    </div>
+    <script src="../public/js/profilesirketCDE.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../public/js/main.js"></script>
+</body>
+
+</html>

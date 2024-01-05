@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Şikayet Çukuru</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/anasayfa.css">
+</head>
+
+<body>
+<!-- Sayfanın header kodları -->
+    <header>
+        <h1 style="font-size: 2.5em;">Şikayet Platformu<a href="anasayfa.html" class="btn btn-outline-light float-right">Çıkış Yap</a></h1>
+        <p style="font-size: 1.2em;">Firma bakmaksızın özgürce şikayetlerinizin sunulduğu yer.</p>
+        
+    </header>
+<!-- Navbar için kodlama -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light background">
+        <form action="./anasayfaFirma.html">
+            <a class="navbar-brand pl-5 text-muted" href="/views/anasayfaFirma.html">ŞikayetÇukuru</a>
+        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <form action="/views/anasayfaFirma.html" method="get">
+                        <a class="nav-link altcizgi" href="/views/anasayfaFirma.html">Anasayfa</a>
+                    </form>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-split-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Şikayetler >
+                    </a>
+
+                    <div class="dropdown-menu pr-5" aria-labelledby="navbarDropdown">
+                        <form action="/views/profilefirma.html">
+                            <a class="dropdown-item" href="profilefirma.html#sikayetlerim">Şikayetleri gör</a>
+                        </form>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form action="/views/profilefirma.html" method="get">
+                        <a class="nav-link" href="/views/profilefirma.html">Profilim</a>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!-- içerik -->
+    <div class="container">
+        <div class="row">
+            <div class="hero-section mt-5">
+                <div class="container">
+                    <h1>Hoş Geldiniz!</h1>
+                    <p class="lead">ŞikayetÇukuru'na hoş geldiniz. Sorunlarınızı paylaşın, diğer kullanıcıların
+                        deneyimlerini keşfedin ve birlikte çözümler bulalım.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mt-5">
+                <div class="company-list">
+                    <h3 style="color: whitesmoke;">En Çok Şikayet Alan Şirketler</h3>
+                    <ol>
+                        <li>
+                            <form action="../views/profilesirketA.html">
+                                <a style="color: black;" class="company btn btn-link btn-outline-light" onclick="window.location.href='./fprofilesirketA.html'">Şirket A (25 Şikayet)</a>
+                            </form>                   
+                        </li>
+                        <li>
+                            <form action="../views/profilesirketB.html">
+                                <a style="color: black;" class="company btn btn-link btn-outline-light" onclick="window.location.href='./fprofilesirketB.html'">Şirket B (22 Şikayet)</a>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="../views/profilesirketC.html">
+                                <a style="color: black;" class="company btn btn-link btn-outline-light" onclick="window.location.href='./fprofilesirketC.html'">Şirket C (18 Şikayet)</a>
+                            </form>                            
+                        </li>
+                        <li>
+                            <form action="../views/profilesirketD.html">
+                                <a style="color: black;" class="company btn btn-link btn-outline-light" onclick="window.location.href='./fprofilesirketD.html'">Şirket D (15 Şikayet)</a>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="../views/profilesirketE.html">
+                                <a style="color: black;" class="company btn btn-link btn-outline-light" onclick="window.location.href='./fprofilesirketE.html'">Şirket E (12 Şikayet)</a>
+                            </form>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+
+            <div class="col-md-8 mt-5">
+                <div class="box">
+                    <h2 class="text-center mb-5">Neden ŞikayetÇukuru'nu Seçmelisiniz?</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="fas fa-comments"></i>
+                                <h3>Kullanıcı Dostu</h3>
+                                <p>Basit arayüzü ile kolayca şikayetlerinizi paylaşın ve diğer kullanıcıların
+                                    şikayetlerini görüntüleyin.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="fas fa-star"></i>
+                                <h3>Şikayet Puanlama</h3>
+                                <p>Diğer kullanıcıların şikayetlerini değerlendirin ve paylaşımlarınıza puan alın.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="fas fa-thumbs-up"></i>
+                                <h3>Çözümler Bulun</h3>
+                                <p>Topluluk ile etkileşimde bulunarak sorunlarınıza çözümler bulun.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reklam panosu -->
+                <div class="box">
+                    <h3 class="font-italic font-weight-light">REKLAM</h3>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="../img/İMG.png" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="background-color: #2ecc71;">GÜNDEM ŞİKAYET SİTESİ!!!!</h5>
+                                <p style="background-color: #2ecc71;">Herkesin rahatsız olduğu şeyi özgürce ifade edebildiği site.</p>
+                              </div>
+                        </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1784000/amazon-reu-1785074.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="background-color: #2ecc71;">REKLAM SAYISI FAZLA ABARTILIYOR!!</h5>
+                                <p style="background-color: #2ecc71;">Netflix'in yanında amazon da reklamlarını arttırıyor.</p>
+                              </div>
+                        </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="https://firmajans.com.tr/wp-content/uploads/2020/01/Google-Adwords-Reklamlar%C4%B1-Telefon-Uzant%C4%B1s%C4%B1.png" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="background-color: #2ecc71;">SOSYAL MEDYA ÇOK TEHLİKELİ!!!</h5>
+                                <p style="background-color: #2ecc71;">Siyah şapkalı hacker grubu instagram hesaplarına erişebiliyor.</p>
+                              </div>
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+
+                <div class="box">
+                    <h3 style="color: whitesmoke;">Daha Fazla İçerik</h3>
+                    <p>Bu bölümde, platformumuzun kullanım kurallarını ve telif hakkı politikalarını bulabilirsiniz. Lütfen aşağıdaki bilgileri dikkatlice okuyun:</p>
+                
+                    <h4>Kullanım Kuralları:</h4>
+                    <p>1. Platformumuzu kullanırken lütfen saygılı olun ve diğer kullanıcıların görüşlerine saygı gösterin.</p>
+                    <p>2. Tehdit, hakaret, spam ve yasa dışı içerik yayınlamaktan kaçının.</p>
+                    <p>3. Gerçek ve doğru bilgilerle şikayetlerinizi paylaşın.</p>
+                
+                    <h4>Telif Hakkı Politikası:</h4>
+                    <p>Platformumuzda paylaşılan içeriklerin telif haklarına saygı gösteriyoruz. Eğer sizin veya başka bir kişinin telif hakkına sahip olduğu bir içerikle ilgili bir şikayetiniz varsa, lütfen bize bildirin. İlgili içerik derhal incelenecek ve uygun önlemler alınacaktır.</p>
+                
+                    <p>Bu kurallara uymayan kullanıcılarımızın hesapları askıya alınabilir veya kapatılabilir. Sorularınız veya endişeleriniz varsa, lütfen bizimle iletişime geçmekten çekinmeyin.</p>
+                
+                    <p>Teşekkür ederiz!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- footer -->
+    <div class="container contact-section">
+        <h2>İletişim</h2>
+        <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+        <p>Email: info@sikayetcukuru.com</p>
+        <p>Telefon: +90 123 456 7890</p>
+    </div>
+    <script src="../public/js/sikayetegit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

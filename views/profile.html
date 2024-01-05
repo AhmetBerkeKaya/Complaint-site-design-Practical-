@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilim</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/profile.css">
+
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 mb-5">
+                    <h1>PROFİLİM <a href="anasayfa.html" class="btn btn-outline-light float-right">Çıkış Yap</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR CODING-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light background">
+            <form action="./anasayfaMusteri.html">
+                <a class="navbar-brand pl-5 text-muted" href="/views/anasayfaMusteri.html">ŞikayetÇukuru</a>
+            </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <form action="/views/anasayfaMusteri.html" method="get">
+                            <a class="nav-link" href="/views/anasayfaMusteri.html">Anasayfa</a>
+                        </form>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle-split" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Şikayetler >
+                        </a>
+
+                        <div class="dropdown-menu pr-5" aria-labelledby="navbarDropdown">
+                            <form action="/views/profile.html">
+                                <a class="dropdown-item" href="profile.html#sikayetlerim">Şikayet Ekle</a>
+                            </form>
+                            <form action="/views/profile.html">
+                                <a class="dropdown-item" href="profile.html#sikayetlerim">Şikayetleri gör</a>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/views/profile.html" method="get">
+                            <a class="nav-link altcizgi" href="/views/profile.html">Profilim</a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="text-muted">Bilgilerim</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum dolorum ex. Adipisci
+                        consectetur recusandae, eius perferendis ratione ducimus dignissimos facere, quae ullam natus
+                        sit enim beatae dolores at corporis veniam vel molestiae voluptate alias animi praesentium
+                        laudantium accusantium cumque dicta! Obcaecati iste sed quod et vitae vero hic similique.</p>
+                </div>
+                <div class="col-md-4"><img
+                        src="https://www.shutterstock.com/shutterstock/photos/2302040151/display_1500/stock-photo-cartoon-man-face-profile-picture-2302040151.jpg"
+                        class="pp img-fluid card-img-top rounded-circle" alt="{Herhangibireleman}" /></div>
+            </div>
+        </section>
+
+        <section class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="text-muted">Profil Bilgilerim</h2>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="edit">
+                        <p class="pr-3 mb-0">Bilgilerini Düzenle</p>
+                        <button class="btn btn-outline-light"><img class="icon"
+                                src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <tbody>
+                    <tr>
+                        <th>Ad :</th>
+                        <td>Ahmet</td>
+                    </tr>
+                    <tr>
+                        <th>Soyad :</th>
+                        <td>Berke</td>
+                    </tr>
+                    <tr>
+                        <th>Cinsiyet: </th>
+                        <td>Erkek</td>
+                    </tr>
+                    <tr>
+                        <th>Telefon :</th>
+                        <td>05559876543</td>
+                    </tr>
+                    <tr>
+                        <th>Mail :</th>
+                        <td>example@mail.com</td>
+                    </tr>
+                    <tr>
+                        <th>Ülke :</th>
+                        <td>Arjantin</td>
+                    </tr>
+                    <tr>
+                        <th>Şehir: </th>
+                        <td>Rosario</td>
+                    </tr>
+                    <tr>
+                        <th>Adres</th>
+                        <td><textarea style="resize: none;" disabled name="address" id="address" cols="50"
+                                rows="3">Arjantin/Rosario</textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Kayıt Tarihi : </th>
+                        <td>22/10/2022</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div id="form-main">
+            <div id="form-div">
+                <form class="form" id="form1">
+
+                    <p class="name">
+                        <input name="name" type="text" class="feedback-input" placeholder="Şirketin adı" id="name" />
+                    </p>
+
+                    <p class="konu">
+                        <input name="konu" type="text" class="feedback-input" id="konu" placeholder="Konu" />
+                    </p>
+
+                    <p class="date">
+                        <input name="date" type="date" class="feedback-input" id="date" placeholder="Şikayet Tarihi" />
+                    </p>
+
+                    <p class="owner">
+                        <input name="owner" type="text" class="feedback-input" id="owner"
+                            placeholder="Şikayet Sahibi" />
+                    </p>
+
+                    <p class="text">
+                        <textarea name="text" class="feedback-input" id="comment" placeholder="Şikayetiniz"></textarea>
+                    </p>
+                    <input type="hidden" id="complaintId" />
+
+                    <div class="submit">
+                        <input type="submit" value="GÖNDER" id="button-blue" onclick="submitComplaintForm()" />
+                        <div class="ease"></div>
+
+                    </div>
+                    <div class="quit">
+                        <input type="submit" onclick="closeFormekle()" value="KAPAT" id="button-red">
+                        <div class="ease">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <section class="pb-5 mb-4" id="sikayetlerim">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h2 class="text-muted mb-0">Gönderilerim</h2>
+                </div>
+                <!-- Şikayet Ekle Butonu -->
+                <button id="openFormBtn" onclick="openFormekle()" class="btn btn-dark ml-2 mb-2 d-inline-block">+Şikayet
+                    Ekle</button>
+
+                <!-- Şikayet Listesi -->
+                <div class="list-group" id="complaintsContainer">
+                    <!-- Şikayetler burada görünecek -->
+                </div>
+                <hr>
+            </section>
+
+        </div>
+
+        <div class="container contact-section">
+            <h2>İletişim</h2>
+            <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+            <p>Email: info@sikayetcukuru.com</p>
+            <p>Telefon: +90 123 456 7890</p>
+        </div>
+
+        <!-- Bootstrap JS ve Popper.js -->
+        <script src="../public/js/profile.js"></script>
+        <script src=""></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

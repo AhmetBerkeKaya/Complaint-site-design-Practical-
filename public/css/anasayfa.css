@@ -1,0 +1,135 @@
+body {
+    background: url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    opacity: 100%;
+    background-color: #F8F9FA;
+    color: #343A40;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #343A40;
+    color: #ecf0f1;
+    padding: 1em;
+    text-align: center;
+}
+
+.logo {
+    max-width: 75px;
+    max-height: 75px;
+    border: 1px solid;
+    border-radius: 10px 20px;
+}
+
+nav {
+    background-color: #F8F9FA;
+    padding: 1em;
+    text-align: left;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    margin: 0 1em;
+}
+
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-item .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: black;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover:after {
+    width: 100%;
+    left: 0;
+}
+.nav-link.dropdown-toggle::after {
+    content: "\25B6"; /* Unicode karakteri - sağa ok */
+    display: inline-block;
+    margin-left: 5px; /* Aradaki boşluk */
+}
+.altcizgi {
+    text-decoration-line: underline;
+}
+
+.background {
+    background-image: url('https://i.pinimg.com/originals/48/11/49/48114939364fa67c2483d573b9de18c7.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section {
+    background: url('background-image.jpg') center/cover no-repeat;
+    color: #343A40;
+    /* Yazı rengini koyu renk yap */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #343A40;
+}
+
+.box {
+    background-color: #343A40;
+    color: #ecf0f1;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    min-height: 100px;
+}
+
+.box li a {
+    color: #fff;
+    /* Şikayet linkleri rengi */
+    text-decoration: none;
+}
+
+.box li a:hover {
+    text-decoration: underline;
+    /* Şikayet linkine hover olduğunda altı çizili olacak */
+}
+
+.company-list {
+    background-color: #343A40;
+    color: #ecf0f1;
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+.company-list ol {
+    list-style-type: decimal;
+    padding: 0;
+    margin: 1em;
+}
+
+.company-list li {
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.contact-section {
+    padding: 50px 0;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    color: #ecf0f1;
+}
