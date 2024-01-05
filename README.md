@@ -1,3 +1,5 @@
+## ÖNEMLİ NODE_MODULES ZIP dosyası ayıklanmalıdır.
+
 Şikayetçukuru Uygulaması
 ## Proje Amacı ve Kapsamı
 Bu proje, kullanıcıların şikayetlerini paylaşabileceği ve firma kullanıcılarının bu şikayetlere cevap verebileceği bir platform olan "Şikayetçukuru" uygulamasını geliştirmeyi amaçlamaktadır. Sistemde iki tip kullanıcı bulunmaktadır:
